@@ -18,3 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('/posts', PostController::class);
+Route::get('/posts/{id}/edit', [PostController::class, 'edit']);
+Route::post('posts/{id}', [PostController::class, 'update']);
+ROute::delete('/posts/{id}',[PostsController::class, 'destroy']);
